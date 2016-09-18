@@ -1,6 +1,6 @@
 class Room
 
-  attr_reader :name, :capacity, :song_list, :room_singers, :entry_cost, :free_space
+  attr_reader :name, :capacity, :song_list, :room_singers, :entry_cost, :free_space, :tab
 
   def initialize(name, input_capacity)
     @name = name 
@@ -9,6 +9,7 @@ class Room
     @room_singers = []
     @entry_cost = 5
     @free_space = input_capacity
+    @tab = 0
   end
 
   def add_guest_as_singer(guest)
@@ -40,6 +41,10 @@ class Room
         return "Yay. It's #{singer.name}'s favourite song."
       end
     end
+  end
+
+  def create_a_tab(amount)
+    @tab += amount
   end
 
 end 

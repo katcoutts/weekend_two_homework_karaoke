@@ -49,6 +49,7 @@
       chosen_room.add_guest_as_singer(guest)
     end
 
+
   end
 
 
